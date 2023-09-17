@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Manrope&display=swap");
+/* Global Styling starts */
+:root {
+  font-family: "Manrope", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #202733;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+/* Global Styling ends */
+/* custom created classes starts */
+.shadow {
+  box-shadow: 30px 50px 80px 0px rgba(0, 0, 0, 0.1);
+}
+.play {
+  position: relative;
+}
+.play:after,
+.play:before {
+  content: "";
+  background-color: #4f5d74;
+  position: absolute;
+  width: 45%;
+  height: 0.0625rem;
+  top: 0.4rem;
+}
+.play:before {
+  left: 0;
+}
+.play:after {
+  right: 0;
+}
+.section_padding {
+  padding: 13.9375rem 28.125rem;
+}
+.div_width {
+  width: 90vh;
+  height: 20.75rem;
+}
+/* custom clases ends */
+
+/* Responsiveness*/
+@media (max-width: 640px) {
+  .section_padding {
+    padding: 7.5rem 1rem 12.5rem 1rem;
+  }
+  .div_width {
+    width: 21.4375rem;
+    height: 19.6875rem;
+  }
+  .play:after,
+  .play:before {
+    width: 7.25rem;
+  }
+}
